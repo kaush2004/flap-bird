@@ -112,11 +112,10 @@ while running:
 			grumpy.alive = False
 			grumpy.theta = grumpy.vel * -2
 	
-		if grumpy.rect.bottom >= display_height :
-			# hit_fx.play()
+		if grumpy.rect.bottom >= display_height and grumpy.alive:
 			speed = 0
 			grumpy.alive = False
-			# die_fx.play()#
+			die_fx.play()
 	
 		if len(pipe_group) > 0:
 			p = pipe_group.sprites()[0]
